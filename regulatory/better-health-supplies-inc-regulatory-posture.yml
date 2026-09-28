@@ -1,0 +1,25 @@
+generated: '2026-09-28'
+method: probed
+source: https://joinbetter.com/pages/privacy-policy
+signals:
+  data_retention:
+    evidence:
+      - source: https://joinbetter.com/pages/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "We retain information for as long as necessary to provide services, maintain records, comply with legal obligations, resolve disputes, and enforce agreements."
+    note: Retains data as needed and for legal obligations.
+  notice_and_action:
+    evidence:
+      - source: https://joinbetter.com/pages/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "This Privacy Policy does not replace our Notice of HIPAA Privacy Practices. To the extent there is any conflict between this Privacy Policy and our Notice of HIPAA Privacy Practices with respect to Protected Health Information, the Notice of HIPAA Privacy Practices will control."
+    note: References HIPAA notice and indicates it governs PHI.
+  data_subject_request:
+    evidence:
+      - source: https://joinbetter.com/pages/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "Depending on applicable law, you may request access to, correction of, or deletion of certain Personal Information."
+    note: Provides rights to access, correct, delete personal data.

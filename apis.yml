@@ -1,23 +1,76 @@
 aid: better-health-supplies-inc
+
 name: Better Health Supplies, Inc.
-description: 'Better Health Supplies, Inc. is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: http://joinbetter.com/cdn/shop/files/better-health-bg_1200x1200.png?v=1747645316
+
+description: Better Health Supplies, Inc. (Better Health) is a modern medical supply e‑commerce company that provides a wide range of products
+  for diabetes, incontinence, urology, ostomy, and wound care. It operates an online storefront offering continuous glucose monitors, catheters,
+  ostomy bags, and related accessories, serving both consumers and healthcare professionals across the United States.
+
 url: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- Medical Supplies
+- E-commerce
+- Diabetes
+- Urology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/better-health-supplies-inc-llms.txt
+- type: WellKnown
+  url: well-known/better-health-supplies-inc-well-known.yml
+- type: Hosts
+  url: hosts/better-health-supplies-inc-hosts.yml
+- type: Vendors
+  url: vendors/better-health-supplies-inc-vendors.yml
+- type: TermsOfService
+  url: https://joinbetter.com/pages/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://joinbetter.com/pages/privacy-policy
+- type: Newsroom
+  url: https://joinbetter.com/pages/press
+- type: Blog
+  url: https://blog.joinbetter.com
+- type: DomainSecurity
+  url: security/better-health-supplies-inc-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://joinbetter.com/
+
+apis:
+- name: Better Health API
+  description: GraphQL API for Better Health Supplies
+  humanURL: https://joinbetter.com/
+  baseURL: https://joinbetter.com/api
+  properties:
+  - type: GraphQL
+    url: graphql/joinbetter-graphql-schema.json
+  aid: better-health-supplies-inc:better-health-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
